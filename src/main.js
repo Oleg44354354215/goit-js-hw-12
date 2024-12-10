@@ -61,7 +61,7 @@ function Hadlecick(e) {
 
 async function MorePhoto() {
   page += 1;
-
+  primebtn.style.display = 'none';
   const loadingText = document.querySelector('.loading-text');
   loadingText.style.display = 'block';
   loadingText.classList.remove('hidden'); // Показуємо текст
@@ -74,6 +74,7 @@ async function MorePhoto() {
     // Плавне прокручування сторінки
     const galleryItems = document.querySelectorAll('.gallery-item');
     if (galleryItems.length > 0) {
+      primebtn.style.display = 'block';
       loadingText.style.display = 'none';
       const cardHeight = galleryItems[0].getBoundingClientRect().height;
       const scrollDownLength = cardHeight * 2;
