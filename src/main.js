@@ -13,15 +13,15 @@ const front = document.querySelector('.loader');
 const primebtn = document.querySelector('.btn-js');
 const gal = document.querySelector('.gallery');
 
-putting.addEventListener('submit', Hadlecick);
-primebtn.addEventListener('click', MorePhoto);
+putting.addEventListener('submit', hadlecick);
+primebtn.addEventListener('click', morePhoto);
 
 let page = 1;
 let query = '';
 const perPage = 15;
 let totalPages = 0;
 
-function Hadlecick(e) {
+function hadlecick(e) {
   e.preventDefault();
 
   query = e.target.elements.query.value.trim();
@@ -59,7 +59,7 @@ function Hadlecick(e) {
     });
 }
 
-async function MorePhoto() {
+async function morePhoto() {
   page += 1;
   primebtn.style.display = 'none';
   const loadingText = document.querySelector('.loading-text');
